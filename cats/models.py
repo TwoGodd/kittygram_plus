@@ -13,7 +13,9 @@ class Cat(models.Model):
     name = models.CharField(max_length=16)
     color = models.CharField(max_length=16)
     birth_year = models.IntegerField()
-
+    # Новое поле в модели:
+    owner = models.ForeignKey(
+        Owner, related_name='cats', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
