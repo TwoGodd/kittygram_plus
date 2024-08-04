@@ -22,6 +22,7 @@ class AchievementSerializer(serializers.ModelSerializer):
         fields = ('id', 'achievement_name')
 
 
+# Класс кодирования цвета
 # class Hex2NameColor(serializers.Field):
 #     # При чтении данных ничего не меняем - просто возвращаем как есть
 #     def to_representation(self, value):
