@@ -39,3 +39,8 @@ class CreateRetrieveViewSet(mixins.CreateModelMixin, mixins.RetrieveModelMixin,
                             viewsets.GenericViewSet):
     # В теле класса никакой код не нужен! Пустячок, а приятно.
     pass
+
+
+class LightCatViewSet(CreateRetrieveViewSet):
+    queryset = Cat.objects.all()
+    serializer_class = CatSerializer
