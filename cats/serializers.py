@@ -76,3 +76,11 @@ class CatSerializer(serializers.ModelSerializer):
             AchievementCat.objects.create(
                 achievement=current_achievement, cat=cat)
         return cat
+
+
+class CatListSerializer(serializers.ModelSerializer):
+    color = serializers.ChoiceField(choices=CHOICES)
+
+    class Meta:
+        model = Cat
+        fields = ('id', 'name', 'color')
