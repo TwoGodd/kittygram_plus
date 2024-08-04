@@ -1,6 +1,6 @@
 import datetime as dt
 
-#import webcolors
+# import webcolors
 from rest_framework import serializers
 
 from .models import Achievement, AchievementCat, Cat, Owner, CHOICES
@@ -44,6 +44,7 @@ class CatSerializer(serializers.ModelSerializer):
     # Переопределяем поле achievements
     achievements = AchievementSerializer(many=True, required=False)
     age = serializers.SerializerMethodField()
+    # color = serializers.SerializerMethodField()
     # Теперь поле примет только значение, упомянутое в списке CHOICES
     color = serializers.ChoiceField(choices=CHOICES)
 
