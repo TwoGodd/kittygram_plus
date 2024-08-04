@@ -3,7 +3,7 @@ import datetime as dt
 # import webcolors
 from rest_framework import serializers
 
-from .models import Achievement, AchievementCat, Cat, Owner, CHOICES
+from .models import CHOICES, Achievement, AchievementCat, Cat, Owner
 
 
 class OwnerSerializer(serializers.ModelSerializer):
